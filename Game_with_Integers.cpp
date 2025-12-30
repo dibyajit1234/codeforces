@@ -7,8 +7,8 @@ int main(){
     int n,r;
     cin>>n;
     r=n%3;
-    if(r==1 ||r==2) cout<<"FIRST"<<endl;
-    else cout<<"SECOND"<<endl;
+    if(r==1 ||r==2) cout<<"First"<<endl;
+    else cout<<"Second"<<endl;
   }
   return 0;
 }
