@@ -12,7 +12,7 @@ int main(){
     int count=0,range = max(x.length(),s.length());
 
     
-    while(x.find(s)==string::npos && range--){
+    while(x.find(s)==string::npos && x.length()<150){
       x+=x;
       count++;
 
