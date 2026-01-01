@@ -4,10 +4,24 @@ int main(){
   int t;
   cin>>t;
   while(t--){
-    int a,b,c;
+    int a,b,c,sum;
     cin>>a>>b>>c;
-    if((abs(a-b)+c)%2!=0) cout<<"First"<<endl;
-    else cout<<"Second"<<endl;
+    sum = a+b;
+    if(c%2==0){
+      if(a>b){
+        cout<<"First"<<endl;
+      }
+      else{
+        cout<<"Second"<<endl;
+      }
+    } 
+    else{
+      if(b>a){
+        cout<<"Second"<<endl;
+      }else{
+        cout<<"First"<<endl;
+      }
+    }
   }
   return 0;
 }
