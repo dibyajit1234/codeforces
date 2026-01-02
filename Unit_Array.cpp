@@ -4,29 +4,20 @@ int main(){
   int t;
   cin>>t;
   while(t--){
-    int n,pos=0,neg=0,sum=0,res=0;
+    int n,neg=0,res=0;
     cin>>n;
-    vector<int> a(n);
-    for(int &x:a){
+    for(int i=0;i<n;++i){
+      int x;
       cin>>x;
-      if(x>0)pos++;
-      else neg++;
-      sum+=x;
+      neg+=x==-1;
     }
-    if(sum<0){
-      if(n<3 && pos==0){
-        res = n;
-      }
-      else if(n%2==0){
-        if(pos) res = (n/2)-pos;
-        else res = n/2;
-      }else{
-        if(pos) res = (n/2)+1-pos;
-        else res = (n/2)+2;
-      }
+    if(neg%2){
+      neg-=1;
+      ++res;
     }
-    else{
-      if(neg%2!=0) res=1;
+    while(neg>n - neg){
+      neg-=2;
+      res+=2;
     }
     cout<<res<<endl;
   }
