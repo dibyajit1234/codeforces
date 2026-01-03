@@ -4,9 +4,12 @@ int main(){
   int t;
   cin>>t;
   while(t--){
-    int n,k,temp;
+    long long n,k;
     cin>>n>>k;
-    if((n%k)%2==0) cout<<"Yes"<<endl;
-    else cout<<"NO"<<endl;
+    if (n % 2 == 0 || k % 2 == 1)
+            cout << "YES\n";
+        else
+            cout << "NO\n";
   }
+  return 0;
 }
