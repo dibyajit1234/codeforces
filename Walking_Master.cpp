@@ -7,6 +7,7 @@ int main(){
     int a,b,c,d,count=0;
     bool possible=true;
     cin>>a>>b>>c>>d;
+    if(b>d)possible=false;
     while(b<d){
       b++;
       a++;
