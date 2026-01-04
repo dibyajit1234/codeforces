@@ -5,7 +5,7 @@ int main(){
   int t;
   cin>>t;
   while(t--){
-    int n,i=0,k=0,j=n-1,res =-1;
+    int n,k=0,res =-1;
     cin>>n;
     vector<int> a(n);
     for(int &x:a)cin>>x;
