@@ -4,11 +4,11 @@ int main(){
   int t;
   cin>>t;
   while(t--){
-    int a,b,n;
+    long long a,b,n;
     cin>>a>>b>>n;
-    int count =b;
-    vector<int> v(n);    
-    for(int &x:v){
+    long long count =b;
+    vector<long long> v(n);    
+    for(long long &x:v){
       cin>>x;
       count +=min(a-1,x);
     }
