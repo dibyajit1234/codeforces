@@ -4,14 +4,16 @@ int main(){
   int t;
   cin>>t;
   while(t--){
-    int n,count=0;
+    int n,count=1,ans =1;
     cin>>n;
     string s;
     cin>>s;
     for(int i=1;i<n;i++){
       if(s[i]==s[i-1])count++;
+      else count =1;
+      ans = max(ans,count);
     }
-    cout<<(n%2==0?count+1:count+2)<<endl;
+    cout<<ans+1<<endl;
   }
   return 0;
 }
