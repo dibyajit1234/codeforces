@@ -5,18 +5,19 @@ int main(){
   int t;
   cin>>t;
   while(t--){
-    long long n,q,sum=0;
+    int n,q;
     cin>>n>>q;
-    vector<long long> a(n);
-    for(long long &x:a){
-      cin>>x;
-      sum+=x;
+    vector<int> a(n),as(n);
+    as.push_back(0);
+    for(int i=1;i<=n;i++){
+      cin>>a[i];
+      as[i]=as[i-1]+a[i];
     }
     while(q--){
-      long long l,r,k,temp=0;
+      int l,r,k,temp=0;
       cin>>l>>r>>k;
-      for(long long i=l-1;i<r;i++)temp+=a[i];
-      bool ans = ((sum%2==0)==(((r-l+1)*k-temp)%2==0));
+      int sum = as[n]-as[r]+as[l-1];
+      bool ans = (sum-(r-l+1)*k)%2==0;
       if(ans)cout<<"No"<<endl;
       else cout<<"Yes"<<endl;
     }
