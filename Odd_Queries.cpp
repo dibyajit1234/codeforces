@@ -7,7 +7,7 @@ int main(){
   while(t--){
     int n,q;
     cin>>n>>q;
-    int a[n],as[n];
+    int a[n+1],as[n+1];
     as[0]=0;
     for(int i=1;i<=n;i++){
       cin>>a[i];
