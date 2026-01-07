@@ -12,12 +12,10 @@ int main(){
       cin>>x;
       if(x==1) one++;
     }
-    if(n%2==0){
-      if(one>=n/2)ans = true;
+    if (a[0] == 1 || a[n - 1] == 1) {
+        cout << "Alice" << endl;
+    } else {
+        cout << "Bob" << endl;
     }
-    else {
-        if(one>=(int)(n/2) +1) ans = true;
-    }
-    cout<<(ans?"Alice":"Bob")<<endl;
   }
 }
