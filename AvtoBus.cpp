@@ -1,17 +1,22 @@
 #include<bits/stdc++.h>
+#define ll long long
 using namespace std;
 int main(){
   int t;
   cin>>t;
   while(t--){
-    long long n;
+    ll n;
     cin>>n;
-    if(n==4) cout<<n/4<<' '<<n/4<<endl;
-    else if (n==6) cout<<n/6<<' '<<n/6<<endl;
-    else if(n%4==0 && n%6==0){
-      cout<<n/6<<' '<<n/4<<endl;
+    if(n%2==0 && n>=4){
+      if(n%6==0)cout<<n/6<<' ';
+      else cout<<n/6+1<<' ';
+      cout<<n/4<<endl;
     }
-    else cout<<-1<<endl;
+    else{
+      cout<<-1<<endl;
+    }
   }
   return 0;
 }
+
+
