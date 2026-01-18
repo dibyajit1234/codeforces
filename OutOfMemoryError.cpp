@@ -7,23 +7,34 @@ int main(){
   while(t--){
     ll n,m,h;
     cin>>n>>m>>h;
-    vector<ll> a(n),nunu(n);
+    vector<ll> a(n),nunu(n,0);
+    vector<int>last(n,-1);
     for(ll i=0;i<n;i++){
       ll x;
       cin>>x;
       a[i]=x;
-      nunu[i]=x;
     }
+    int version =0;
     while(m--){
       ll b,c;
       cin>>b>>c;
-      a[--b]+=c;
-      if(a[b]>h){
-        for(ll i=0;i<n;i++) a[i]=nunu[i];
+      b--;
+      if(last[b]!=version){
+        nunu[b]=0;
+        last[b]=version;
       }
+      nunu[b]+=c;
+      if(a[b]+nunu[b]>h){
+        version++;
+      }
+      
     }
-    for(ll x:a)cout<<x<<' ';
+    for(int i=0;i<n;i++){
+      if(last[i]==version) cout<<a[i]+nunu[i]<<' ';
+      else cout<<a[i]<<' ';
+    }
     cout<<endl;
+      
   }
   return 0;
 }
