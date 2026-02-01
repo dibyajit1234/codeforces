@@ -1,10 +1,27 @@
 #include<bits/stdc++.h>
 using namespace std;
+void swap(char &a,char&b){
+        char temp=a;
+        a=b;
+        b=temp;
+    }
 int main(){
-  int n;
-  cin>>n;
-  vector<int> a(n);
-  for(int &x:a)cin>>x;
-  if(n==1)cout<<a[0]<<endl;
-  else cout<<(a[0]^a[1])<<endl;
+  string s=")ebc#da@f(";
+  int n=s.length();
+        int i=0,j=n-1;
+        while (i < j) {
+        if (!isalpha((unsigned char)s[i])) {
+            i++;
+        }
+        else if (!isalpha((unsigned char)s[j])) {
+            j--;
+        }
+        else {
+            swap(s[i], s[j]);
+            i++;
+            j--;
+        }
+    }
+        cout<<s<<endl;
+    
 }
