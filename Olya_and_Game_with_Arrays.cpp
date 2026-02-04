@@ -21,7 +21,7 @@ int main(){
           lm2=lm1;
           lm1=x;
         }
-        else if(x>lm1 && x<lm2) lm2=x;
+        else  lm2=min(lm2,x);
       }
       min2sum+=lm2;
       min1 = min(min1,lm1);
