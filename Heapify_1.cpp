@@ -1,5 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
+
+int nunu(int n){
+  while(n%2==0)n/=2;
+  return n;
+}
+
 int main(){
   ios::sync_with_stdio(false);
   cin.tie(nullptr);
@@ -14,14 +20,10 @@ int main(){
 
 
     for(int i=1;i<=n;i++){
-        if(a[i] != i){
-            int j = i;
-            while(j <= n && a[j] != i) j *= 2;
-            if(j > n){
-                ans = false;
-                break;
-            }else {a[n-i+1]=a[i];}
-        }
+       if(nunu(a[i])!=nunu(i)){
+        ans = false;
+        break;
+      }
     }
     cout<<(ans?"Yes":"No")<<'\n';
   }
