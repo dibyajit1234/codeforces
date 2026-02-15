@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+/*#include<bits/stdc++.h>
 using namespace std;
 int main(){
   ios::sync_with_stdio(false);
@@ -14,10 +14,9 @@ int main(){
       int x;
       cin>>x;
       if(x==67)ss = true;
-      if(x==1) one = true;
     }
     
-    cout<<((ss && one)?"Yes":"No")<<'\n';
+    cout<<(ss?"Yes":"No")<<'\n';
   }
   return 0;
 }
