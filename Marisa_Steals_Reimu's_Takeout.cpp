@@ -8,17 +8,21 @@ int main(){
   while(t--){
     int n,ans =0;
     cin>>n;
+    int c0=0,c1=0,c2=0;
     int w[n];
-    for(int &x:w)cin>>x;
-    int temp =0;
-    for(int i=0;i<n;i++){
-       temp+=w[i];
-      if(temp%3==0){
-        ans++;
-        temp=0;
-      }
+    for(int &x:w){
+      cin>>x;
+      if(x==0)c0++;
+      else if(x==1)c1++;
+      else c2++;
     }
-    cout<<ans<<'\n';
+    int pairs = min(c1, c2);
+        ans = c0 + pairs;
+        c1 -= pairs;
+        c2 -= pairs;
+        ans += c1 / 3;
+        ans += c2 / 3;
+        cout << ans << '\n';
   }
   return 0;
 }
