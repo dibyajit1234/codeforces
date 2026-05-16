@@ -16,7 +16,7 @@ public class Not_Quite_a_Palindromic_String{
         else zeros++;
       }
       int mn = Math.max(ones,zeros)-n/2;
-      int mx = ones/2 +zeros/2;
+      i nt mx = ones/2 +zeros/2;
       if(k>=mn && (k-mn)%2==0 && k<=mx)System.out.println("Yes");
       else System.out.println("No");
     }
