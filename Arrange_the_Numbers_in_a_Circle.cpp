@@ -15,7 +15,7 @@ int main(){
       tot+=x;
       if(x>=2){
         ans+=x;
-        extra = (x-2)/2;
+        extra += (x-2)/2;
       }
       else singles++;
     }
