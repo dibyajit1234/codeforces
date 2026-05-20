@@ -20,6 +20,28 @@ public class Snowfall{
         }
         j++;
       }
+      j=i;
+      while(i<n && j<n){
+        if(a[j]%2==0){
+        int temp = a[j];
+          a[j]=a[i];
+          a[i]=temp;
+          i++;
+        }
+        j++;
+      }
+      j=i;
+      while(i<n && j<n){
+        if(a[j]%6!=0 && a[j]%2!=0 && a[j]%3!=0){
+        int temp = a[j];
+          a[j]=a[i];
+          a[i]=temp;
+          i++;
+        }
+        j++;
+      }
+
+
       for(int x:a){
         System.out.print(x+" ");
       }
