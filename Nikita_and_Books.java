@@ -5,12 +5,12 @@ public class Nikita_and_Books{
     int t = sc.nextInt();
     while(t-->0){
       int n = sc.nextInt();
-      int [] arr = new int[n];
-      for(int i=0;i<n;i++)arr[i]=sc.nextInt();
-      int remain=0;
+      long [] arr = new long[n];
+      for(int i=0;i<n;i++)arr[i]=sc.nextLong();
+      long remain=0;
       boolean ans = true;
       for(int i=0;i<n;i++){
-        int need = i+1-arr[i];
+        long need = i+1-arr[i];
         if(need<0){
           remain += need*-1;
           continue;
